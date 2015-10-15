@@ -1,0 +1,447 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		46945A011BBA259300291141 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 46945A001BBA259300291141 /* main.m */; };
+		46945A041BBA259300291141 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 46945A031BBA259300291141 /* AppDelegate.m */; };
+		46945A071BBA259300291141 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 46945A061BBA259300291141 /* ViewController.m */; };
+		46945A0A1BBA259300291141 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 46945A081BBA259300291141 /* Main.storyboard */; };
+		46945A0C1BBA259300291141 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 46945A0B1BBA259300291141 /* Images.xcassets */; };
+		46945A0F1BBA259300291141 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 46945A0D1BBA259300291141 /* LaunchScreen.xib */; };
+		46945A1B1BBA259300291141 /* Tappy_CatTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 46945A1A1BBA259300291141 /* Tappy_CatTests.m */; };
+		46945A251BBA25DC00291141 /* main.xib in Resources */ = {isa = PBXBuildFile; fileRef = 46945A241BBA25DC00291141 /* main.xib */; };
+		46945A281BBA2A9D00291141 /* SplashViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 46945A271BBA2A9D00291141 /* SplashViewController.m */; };
+		46945A2A1BBA2AB300291141 /* splash.xib in Resources */ = {isa = PBXBuildFile; fileRef = 46945A291BBA2AB300291141 /* splash.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		46945A151BBA259300291141 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 469459F31BBA259300291141 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 469459FA1BBA259300291141;
+			remoteInfo = "Tappy Cat";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		469459FB1BBA259300291141 /* Tappy Cat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Tappy Cat.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		469459FF1BBA259300291141 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		46945A001BBA259300291141 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		46945A021BBA259300291141 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		46945A031BBA259300291141 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		46945A051BBA259300291141 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		46945A061BBA259300291141 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		46945A091BBA259300291141 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		46945A0B1BBA259300291141 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		46945A0E1BBA259300291141 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		46945A141BBA259300291141 /* Tappy CatTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Tappy CatTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		46945A191BBA259300291141 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		46945A1A1BBA259300291141 /* Tappy_CatTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Tappy_CatTests.m; sourceTree = "<group>"; };
+		46945A241BBA25DC00291141 /* main.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = main.xib; sourceTree = "<group>"; };
+		46945A261BBA2A9D00291141 /* SplashViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SplashViewController.h; sourceTree = "<group>"; };
+		46945A271BBA2A9D00291141 /* SplashViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SplashViewController.m; sourceTree = "<group>"; };
+		46945A291BBA2AB300291141 /* splash.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = splash.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		469459F81BBA259300291141 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		46945A111BBA259300291141 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		469459F21BBA259300291141 = {
+			isa = PBXGroup;
+			children = (
+				469459FD1BBA259300291141 /* Tappy Cat */,
+				46945A171BBA259300291141 /* Tappy CatTests */,
+				469459FC1BBA259300291141 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		469459FC1BBA259300291141 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				469459FB1BBA259300291141 /* Tappy Cat.app */,
+				46945A141BBA259300291141 /* Tappy CatTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		469459FD1BBA259300291141 /* Tappy Cat */ = {
+			isa = PBXGroup;
+			children = (
+				46945A241BBA25DC00291141 /* main.xib */,
+				46945A291BBA2AB300291141 /* splash.xib */,
+				46945A021BBA259300291141 /* AppDelegate.h */,
+				46945A031BBA259300291141 /* AppDelegate.m */,
+				46945A051BBA259300291141 /* ViewController.h */,
+				46945A061BBA259300291141 /* ViewController.m */,
+				46945A261BBA2A9D00291141 /* SplashViewController.h */,
+				46945A271BBA2A9D00291141 /* SplashViewController.m */,
+				46945A081BBA259300291141 /* Main.storyboard */,
+				46945A0B1BBA259300291141 /* Images.xcassets */,
+				46945A0D1BBA259300291141 /* LaunchScreen.xib */,
+				469459FE1BBA259300291141 /* Supporting Files */,
+			);
+			path = "Tappy Cat";
+			sourceTree = "<group>";
+		};
+		469459FE1BBA259300291141 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				469459FF1BBA259300291141 /* Info.plist */,
+				46945A001BBA259300291141 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		46945A171BBA259300291141 /* Tappy CatTests */ = {
+			isa = PBXGroup;
+			children = (
+				46945A1A1BBA259300291141 /* Tappy_CatTests.m */,
+				46945A181BBA259300291141 /* Supporting Files */,
+			);
+			path = "Tappy CatTests";
+			sourceTree = "<group>";
+		};
+		46945A181BBA259300291141 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				46945A191BBA259300291141 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		469459FA1BBA259300291141 /* Tappy Cat */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 46945A1E1BBA259300291141 /* Build configuration list for PBXNativeTarget "Tappy Cat" */;
+			buildPhases = (
+				469459F71BBA259300291141 /* Sources */,
+				469459F81BBA259300291141 /* Frameworks */,
+				469459F91BBA259300291141 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Tappy Cat";
+			productName = "Tappy Cat";
+			productReference = 469459FB1BBA259300291141 /* Tappy Cat.app */;
+			productType = "com.apple.product-type.application";
+		};
+		46945A131BBA259300291141 /* Tappy CatTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 46945A211BBA259300291141 /* Build configuration list for PBXNativeTarget "Tappy CatTests" */;
+			buildPhases = (
+				46945A101BBA259300291141 /* Sources */,
+				46945A111BBA259300291141 /* Frameworks */,
+				46945A121BBA259300291141 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				46945A161BBA259300291141 /* PBXTargetDependency */,
+			);
+			name = "Tappy CatTests";
+			productName = "Tappy CatTests";
+			productReference = 46945A141BBA259300291141 /* Tappy CatTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		469459F31BBA259300291141 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0640;
+				ORGANIZATIONNAME = "Michelle Chen";
+				TargetAttributes = {
+					469459FA1BBA259300291141 = {
+						CreatedOnToolsVersion = 6.4;
+					};
+					46945A131BBA259300291141 = {
+						CreatedOnToolsVersion = 6.4;
+						TestTargetID = 469459FA1BBA259300291141;
+					};
+				};
+			};
+			buildConfigurationList = 469459F61BBA259300291141 /* Build configuration list for PBXProject "Tappy Cat" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 469459F21BBA259300291141;
+			productRefGroup = 469459FC1BBA259300291141 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				469459FA1BBA259300291141 /* Tappy Cat */,
+				46945A131BBA259300291141 /* Tappy CatTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		469459F91BBA259300291141 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				46945A0A1BBA259300291141 /* Main.storyboard in Resources */,
+				46945A0F1BBA259300291141 /* LaunchScreen.xib in Resources */,
+				46945A251BBA25DC00291141 /* main.xib in Resources */,
+				46945A0C1BBA259300291141 /* Images.xcassets in Resources */,
+				46945A2A1BBA2AB300291141 /* splash.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		46945A121BBA259300291141 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		469459F71BBA259300291141 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				46945A071BBA259300291141 /* ViewController.m in Sources */,
+				46945A041BBA259300291141 /* AppDelegate.m in Sources */,
+				46945A011BBA259300291141 /* main.m in Sources */,
+				46945A281BBA2A9D00291141 /* SplashViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		46945A101BBA259300291141 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				46945A1B1BBA259300291141 /* Tappy_CatTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		46945A161BBA259300291141 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 469459FA1BBA259300291141 /* Tappy Cat */;
+			targetProxy = 46945A151BBA259300291141 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		46945A081BBA259300291141 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				46945A091BBA259300291141 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		46945A0D1BBA259300291141 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				46945A0E1BBA259300291141 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		46945A1C1BBA259300291141 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		46945A1D1BBA259300291141 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		46945A1F1BBA259300291141 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "Tappy Cat/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		46945A201BBA259300291141 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "Tappy Cat/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		46945A221BBA259300291141 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "Tappy CatTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Tappy Cat.app/Tappy Cat";
+			};
+			name = Debug;
+		};
+		46945A231BBA259300291141 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "Tappy CatTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Tappy Cat.app/Tappy Cat";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		469459F61BBA259300291141 /* Build configuration list for PBXProject "Tappy Cat" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				46945A1C1BBA259300291141 /* Debug */,
+				46945A1D1BBA259300291141 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		46945A1E1BBA259300291141 /* Build configuration list for PBXNativeTarget "Tappy Cat" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				46945A1F1BBA259300291141 /* Debug */,
+				46945A201BBA259300291141 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		46945A211BBA259300291141 /* Build configuration list for PBXNativeTarget "Tappy CatTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				46945A221BBA259300291141 /* Debug */,
+				46945A231BBA259300291141 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 469459F31BBA259300291141 /* Project object */;
+}
