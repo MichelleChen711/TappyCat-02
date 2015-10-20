@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		460218891BD5D3E6000E88E9 /* meow01.wav in Resources */ = {isa = PBXBuildFile; fileRef = 460218881BD5D3E6000E88E9 /* meow01.wav */; };
+		4602188B1BD5D912000E88E9 /* alert.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4602188A1BD5D912000E88E9 /* alert.xib */; };
+		4602188E1BD5DB85000E88E9 /* CustomIOSAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4602188D1BD5DB85000E88E9 /* CustomIOSAlertView.m */; };
 		4624F24B1BD572040021FE36 /* Meow-sound-3.wav in Resources */ = {isa = PBXBuildFile; fileRef = 4624F24A1BD572040021FE36 /* Meow-sound-3.wav */; };
 		46945A011BBA259300291141 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 46945A001BBA259300291141 /* main.m */; };
 		46945A041BBA259300291141 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 46945A031BBA259300291141 /* AppDelegate.m */; };
@@ -31,6 +34,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		460218881BD5D3E6000E88E9 /* meow01.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = meow01.wav; sourceTree = "<group>"; };
+		4602188A1BD5D912000E88E9 /* alert.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = alert.xib; sourceTree = "<group>"; };
+		4602188C1BD5DB85000E88E9 /* CustomIOSAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomIOSAlertView.h; sourceTree = "<group>"; };
+		4602188D1BD5DB85000E88E9 /* CustomIOSAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomIOSAlertView.m; sourceTree = "<group>"; };
 		4624F24A1BD572040021FE36 /* Meow-sound-3.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "Meow-sound-3.wav"; sourceTree = "<group>"; };
 		469459FB1BBA259300291141 /* Tappy Cat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Tappy Cat.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		469459FF1BBA259300291141 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -91,7 +98,10 @@
 			isa = PBXGroup;
 			children = (
 				46945A241BBA25DC00291141 /* main.xib */,
+				4602188A1BD5D912000E88E9 /* alert.xib */,
 				46945A291BBA2AB300291141 /* splash.xib */,
+				4602188C1BD5DB85000E88E9 /* CustomIOSAlertView.h */,
+				4602188D1BD5DB85000E88E9 /* CustomIOSAlertView.m */,
 				46945A021BBA259300291141 /* AppDelegate.h */,
 				46945A031BBA259300291141 /* AppDelegate.m */,
 				46945A051BBA259300291141 /* ViewController.h */,
@@ -109,6 +119,7 @@
 		469459FE1BBA259300291141 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				460218881BD5D3E6000E88E9 /* meow01.wav */,
 				4624F24A1BD572040021FE36 /* Meow-sound-3.wav */,
 				469459FF1BBA259300291141 /* Info.plist */,
 				46945A001BBA259300291141 /* main.m */,
@@ -214,6 +225,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				46945A0A1BBA259300291141 /* Main.storyboard in Resources */,
+				460218891BD5D3E6000E88E9 /* meow01.wav in Resources */,
+				4602188B1BD5D912000E88E9 /* alert.xib in Resources */,
 				46945A0F1BBA259300291141 /* LaunchScreen.xib in Resources */,
 				4624F24B1BD572040021FE36 /* Meow-sound-3.wav in Resources */,
 				46945A251BBA25DC00291141 /* main.xib in Resources */,
@@ -240,6 +253,7 @@
 				46945A041BBA259300291141 /* AppDelegate.m in Sources */,
 				46945A011BBA259300291141 /* main.m in Sources */,
 				46945A281BBA2A9D00291141 /* SplashViewController.m in Sources */,
+				4602188E1BD5DB85000E88E9 /* CustomIOSAlertView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -367,6 +381,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = "Tappy Cat/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -377,6 +392,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = "Tappy Cat/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";

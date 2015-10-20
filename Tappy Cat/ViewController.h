@@ -26,6 +26,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *lBottomInstructions;
 @property (weak, nonatomic) IBOutlet UILabel *lTime;
 @property (weak, nonatomic) IBOutlet UIButton *bNextLabel;
+@property (strong, nonatomic) IBOutlet UIView *alertBox;
 
 - (IBAction)bNext:(UIButton *)sender;
 

@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "CustomIOSAlertView.h"
 
 @interface ViewController () {
     int imageCount;
@@ -23,6 +24,7 @@
     UIImage *tappyCat2;
     int start;
     SystemSoundID meowSound;
+    CustomIOSAlertView *alertView;
 }
 
 @end
@@ -59,8 +61,12 @@
     [images addObject:tappyCat1];
     [images addObject:tappyCat2];
     
-    NSString *meowPath = [[NSBundle mainBundle]pathForResource:@"Meow-sound-3" ofType:@"wav"];
+    NSString *meowPath = [[NSBundle mainBundle]pathForResource:@"meow01" ofType:@"wav"];
     NSURL *meowURL = [NSURL fileURLWithPath:meowPath];
+    
+    alertView = [[CustomIOSAlertView alloc] init];
+    [alertView setContainerView:_alertBox];
+    
 
     AudioServicesCreateSystemSoundID((__bridge CFURLRef)meowURL, &(meowSound));
     
@@ -220,6 +226,7 @@ Within the cat image boundaries, create a small shape at a random coordinate and
                                               cancelButtonTitle:@"OK"
                                               otherButtonTitles:nil];
         [alert show];
+        //[alertView show];
     }
 }
 
