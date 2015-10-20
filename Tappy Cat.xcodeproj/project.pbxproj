@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4624F24B1BD572040021FE36 /* Meow-sound-3.wav in Resources */ = {isa = PBXBuildFile; fileRef = 4624F24A1BD572040021FE36 /* Meow-sound-3.wav */; };
 		46945A011BBA259300291141 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 46945A001BBA259300291141 /* main.m */; };
 		46945A041BBA259300291141 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 46945A031BBA259300291141 /* AppDelegate.m */; };
 		46945A071BBA259300291141 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 46945A061BBA259300291141 /* ViewController.m */; };
@@ -30,6 +31,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4624F24A1BD572040021FE36 /* Meow-sound-3.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "Meow-sound-3.wav"; sourceTree = "<group>"; };
 		469459FB1BBA259300291141 /* Tappy Cat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Tappy Cat.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		469459FF1BBA259300291141 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		46945A001BBA259300291141 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -107,6 +109,7 @@
 		469459FE1BBA259300291141 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				4624F24A1BD572040021FE36 /* Meow-sound-3.wav */,
 				469459FF1BBA259300291141 /* Info.plist */,
 				46945A001BBA259300291141 /* main.m */,
 			);
@@ -212,6 +215,7 @@
 			files = (
 				46945A0A1BBA259300291141 /* Main.storyboard in Resources */,
 				46945A0F1BBA259300291141 /* LaunchScreen.xib in Resources */,
+				4624F24B1BD572040021FE36 /* Meow-sound-3.wav in Resources */,
 				46945A251BBA25DC00291141 /* main.xib in Resources */,
 				46945A0C1BBA259300291141 /* Images.xcassets in Resources */,
 				46945A2A1BBA2AB300291141 /* splash.xib in Resources */,
@@ -432,6 +436,7 @@
 				46945A201BBA259300291141 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		46945A211BBA259300291141 /* Build configuration list for PBXNativeTarget "Tappy CatTests" */ = {
 			isa = XCConfigurationList;
@@ -440,6 +445,7 @@
 				46945A231BBA259300291141 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -4,6 +4,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
         <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
         <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ViewController">
@@ -35,17 +36,17 @@
                     </constraints>
                 </imageView>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tappycat_s1-02" translatesAutoresizingMaskIntoConstraints="NO" id="Lu9-bt-zsL" userLabel="tappycat02">
-                    <rect key="frame" x="126" y="114" width="368" height="400"/>
+                    <rect key="frame" x="130" y="118" width="360" height="392"/>
                     <constraints>
-                        <constraint firstAttribute="width" constant="368" id="6Pj-5X-deN"/>
-                        <constraint firstAttribute="height" constant="400" id="Tda-Mi-Tac"/>
+                        <constraint firstAttribute="width" constant="360" id="6Pj-5X-deN"/>
+                        <constraint firstAttribute="height" constant="392" id="Tda-Mi-Tac"/>
                     </constraints>
                 </imageView>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tappycat_s2-02" translatesAutoresizingMaskIntoConstraints="NO" id="JF9-jF-p2F" userLabel="tappycat03">
-                    <rect key="frame" x="126" y="114" width="368" height="400"/>
+                    <rect key="frame" x="130" y="118" width="360" height="392"/>
                     <constraints>
-                        <constraint firstAttribute="width" constant="368" id="FMU-9M-pwa"/>
-                        <constraint firstAttribute="height" constant="400" id="USh-A4-6Lo"/>
+                        <constraint firstAttribute="width" constant="360" id="FMU-9M-pwa"/>
+                        <constraint firstAttribute="height" constant="392" id="USh-A4-6Lo"/>
                     </constraints>
                 </imageView>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9Ud-Pj-Gme" userLabel="TopView">
@@ -96,34 +97,34 @@
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Press Start and then tap around to find the sweet spot!" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jqa-gN-i3G">
                     <rect key="frame" x="139" y="528" width="342" height="64"/>
                     <constraints>
-                        <constraint firstAttribute="width" constant="342" id="5Oz-1D-K8p"/>
-                        <constraint firstAttribute="height" constant="64" id="JUg-In-zZA"/>
+                        <constraint firstAttribute="height" constant="64" id="bQF-hg-mok"/>
+                        <constraint firstAttribute="width" constant="342" id="fMs-e2-V3z"/>
                     </constraints>
                     <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
                     <color key="textColor" red="0.99215686270000003" green="0.33333333329999998" blue="0.28235294119999998" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tappycat_s3-02" translatesAutoresizingMaskIntoConstraints="NO" id="EcP-Ov-fwr" userLabel="tappycat04">
-                    <rect key="frame" x="126" y="114" width="368" height="400"/>
+                    <rect key="frame" x="130" y="118" width="360" height="392"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="400" id="ccj-OV-nnH"/>
-                        <constraint firstAttribute="width" constant="368" id="vjo-h8-8Nr"/>
+                        <constraint firstAttribute="height" constant="392" id="ccj-OV-nnH"/>
+                        <constraint firstAttribute="width" constant="360" id="vjo-h8-8Nr"/>
                     </constraints>
                 </imageView>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstItem="EcP-Ov-fwr" firstAttribute="top" secondItem="Lu9-bt-zsL" secondAttribute="top" id="0Kr-T6-GPd"/>
-                <constraint firstItem="EcP-Ov-fwr" firstAttribute="top" secondItem="0V7-XY-Ivs" secondAttribute="top" id="3AC-uI-nOn"/>
+                <constraint firstItem="jqa-gN-i3G" firstAttribute="bottom" secondItem="XBD-sP-lRL" secondAttribute="bottomMargin" id="38f-Tp-hBz"/>
+                <constraint firstItem="EcP-Ov-fwr" firstAttribute="top" secondItem="0V7-XY-Ivs" secondAttribute="top" constant="4" id="3AC-uI-nOn"/>
                 <constraint firstItem="ZUI-65-YLp" firstAttribute="trailing" secondItem="9Ud-Pj-Gme" secondAttribute="trailing" id="3rz-ip-SSg"/>
                 <constraint firstItem="ZUI-65-YLp" firstAttribute="leading" secondItem="9Ud-Pj-Gme" secondAttribute="leading" id="8E2-al-7KV"/>
-                <constraint firstAttribute="bottom" secondItem="jqa-gN-i3G" secondAttribute="bottom" constant="8" id="9bc-H6-hNU"/>
                 <constraint firstAttribute="bottom" secondItem="ZUI-65-YLp" secondAttribute="bottom" id="DlT-KT-ytK"/>
                 <constraint firstItem="Lu9-bt-zsL" firstAttribute="top" secondItem="JF9-jF-p2F" secondAttribute="top" id="F0M-P2-suY"/>
                 <constraint firstItem="JF9-jF-p2F" firstAttribute="leading" secondItem="EcP-Ov-fwr" secondAttribute="leading" id="FZR-XO-ql9"/>
-                <constraint firstItem="EcP-Ov-fwr" firstAttribute="leading" secondItem="0V7-XY-Ivs" secondAttribute="leading" id="IBB-Ay-Yo9"/>
+                <constraint firstItem="EcP-Ov-fwr" firstAttribute="leading" secondItem="0V7-XY-Ivs" secondAttribute="leading" constant="4" id="IBB-Ay-Yo9"/>
                 <constraint firstItem="9Ud-Pj-Gme" firstAttribute="top" secondItem="XBD-sP-lRL" secondAttribute="top" id="L8j-9g-cuX"/>
-                <constraint firstItem="jqa-gN-i3G" firstAttribute="centerX" secondItem="XBD-sP-lRL" secondAttribute="centerX" constant="10" id="LzO-CZ-wdT"/>
+                <constraint firstItem="jqa-gN-i3G" firstAttribute="centerX" secondItem="JF9-jF-p2F" secondAttribute="centerX" id="MXf-Wp-zbH"/>
                 <constraint firstItem="ZUI-65-YLp" firstAttribute="top" secondItem="9Ud-Pj-Gme" secondAttribute="top" id="bY0-dI-jW3"/>
                 <constraint firstItem="9Ud-Pj-Gme" firstAttribute="leading" secondItem="XBD-sP-lRL" secondAttribute="leading" id="eq5-hc-jvW"/>
                 <constraint firstItem="0V7-XY-Ivs" firstAttribute="centerX" secondItem="XBD-sP-lRL" secondAttribute="centerX" constant="10" id="hF3-r1-eUY"/>
@@ -139,9 +140,9 @@
         </view>
     </objects>
     <resources>
-        <image name="tappycat_s1-01" width="471" height="494"/>
-        <image name="tappycat_s1-02" width="480" height="482"/>
-        <image name="tappycat_s2-02" width="480" height="482"/>
-        <image name="tappycat_s3-02" width="480" height="482"/>
+        <image name="tappycat_s1-01" width="506" height="494"/>
+        <image name="tappycat_s1-02" width="506" height="482"/>
+        <image name="tappycat_s2-02" width="506" height="482"/>
+        <image name="tappycat_s3-02" width="506" height="482"/>
     </resources>
 </document>

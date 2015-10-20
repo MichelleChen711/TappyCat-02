@@ -22,6 +22,7 @@
     UIImage *tappyCat1;
     UIImage *tappyCat2;
     int start;
+    SystemSoundID meowSound;
 }
 
 @end
@@ -57,6 +58,12 @@
     tappyCat2 = [UIImage imageNamed:@"tappycat_s1-02"];
     [images addObject:tappyCat1];
     [images addObject:tappyCat2];
+    
+    NSString *meowPath = [[NSBundle mainBundle]pathForResource:@"Meow-sound-3" ofType:@"wav"];
+    NSURL *meowURL = [NSURL fileURLWithPath:meowPath];
+
+    AudioServicesCreateSystemSoundID((__bridge CFURLRef)meowURL, &(meowSound));
+    
     
     [self animation];
     
@@ -134,6 +141,7 @@ Within the cat image boundaries, create a small shape at a random coordinate and
 -(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
     
     [touches enumerateObjectsUsingBlock:^(id obj, BOOL *stop) {
+        
         // Get a single touch and it's coordinates
         UITouch *touch = obj;
         CGPoint touchPoint = [touch locationInView:self.view];
@@ -144,6 +152,7 @@ Within the cat image boundaries, create a small shape at a random coordinate and
             _lBottomInstructions.text = @"Press Start first...";
         }
         else{
+            
             if(CGRectContainsPoint(gettingClose.frame, touchPoint)){
                 //touched within the large shape
                 state = 2;
@@ -156,6 +165,8 @@ Within the cat image boundaries, create a small shape at a random coordinate and
                 
                 if(CGRectContainsPoint(sweetSpot.frame, touchPoint)){
                     //touched within the small shape
+                    AudioServicesPlaySystemSound(meowSound);
+                    
                     tapCount ++;
                     _lScore.text = [NSString stringWithFormat:@"Score: %d",tapCount];
                     _lBottomInstructions.text = @"You got it! Find the next spot...";
