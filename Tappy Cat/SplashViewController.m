@@ -8,7 +8,11 @@
 
 #import "SplashViewController.h"
 
-@interface SplashViewController ()
+@interface SplashViewController (){
+    
+    SystemSoundID themeSound;
+    AVAudioPlayer *audioPlayer;
+}
 
 @end
 
@@ -21,6 +25,16 @@
     oSplashView.frame = CGRectMake(0, 0, oSplashSize.width, oSplashSize.height);
     [self.view addSubview:oSplashView];
     
+    NSString *themePath = [[NSBundle mainBundle]pathForResource:@"ComeBack01" ofType:@"wav"];
+    NSURL *themeURL = [NSURL fileURLWithPath:themePath];
+    
+    audioPlayer = [[AVAudioPlayer alloc]
+                                  initWithContentsOfURL:themeURL
+                                  error:nil];
+    [audioPlayer setNumberOfLoops:-1];
+    [audioPlayer setVolume:0.8];
+    [audioPlayer play];
+    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -31,6 +45,7 @@
 #pragma mark Click Actions
 
 - (IBAction)bPlay:(UIButton *)sender {
+    [audioPlayer stop];
     [self performSegueWithIdentifier:@"oPlaySegue" sender:nil];
 }
 @end

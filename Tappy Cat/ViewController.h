@@ -9,9 +9,7 @@
 #import <UIKit/UIKit.h>
 #import <AudioToolbox/AudioToolbox.h>
 #import <QuartzCore/QuartzCore.h>
-
-
-
+#import <AVFoundation/AVFoundation.h>
 
 @interface ViewController : UIViewController
 
@@ -27,12 +25,17 @@
 @property (weak, nonatomic) IBOutlet UIImageView *iTappyCat03_2;
 @property (weak, nonatomic) IBOutlet UIImageView *iTappyCat04_2;
 
+
+@property (weak, nonatomic) IBOutlet UILabel *lLives;
+@property (weak, nonatomic) IBOutlet UILabel *lTopScore;
 @property (weak, nonatomic) IBOutlet UILabel *lScore;
 @property (weak, nonatomic) IBOutlet UILabel *lBottomInstructions;
 @property (weak, nonatomic) IBOutlet UILabel *lTime;
 @property (weak, nonatomic) IBOutlet UIButton *bNextLabel;
 @property (strong, nonatomic) IBOutlet UIView *alertBox;
+@property (weak, nonatomic) IBOutlet UIButton *bPauseLabel;
 
 - (IBAction)bNext:(UIButton *)sender;
+- (IBAction)bPause:(UIButton *)sender;
 
 @end
