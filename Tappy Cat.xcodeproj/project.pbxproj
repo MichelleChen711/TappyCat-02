@@ -21,6 +21,7 @@
 		46945A251BBA25DC00291141 /* main.xib in Resources */ = {isa = PBXBuildFile; fileRef = 46945A241BBA25DC00291141 /* main.xib */; };
 		46945A281BBA2A9D00291141 /* SplashViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 46945A271BBA2A9D00291141 /* SplashViewController.m */; };
 		46945A2A1BBA2AB300291141 /* splash.xib in Resources */ = {isa = PBXBuildFile; fileRef = 46945A291BBA2AB300291141 /* splash.xib */; };
+		46C514901C0A782700546E04 /* Animated.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 46C5148F1C0A782700546E04 /* Animated.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +57,7 @@
 		46945A261BBA2A9D00291141 /* SplashViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SplashViewController.h; sourceTree = "<group>"; };
 		46945A271BBA2A9D00291141 /* SplashViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SplashViewController.m; sourceTree = "<group>"; };
 		46945A291BBA2AB300291141 /* splash.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = splash.xib; sourceTree = "<group>"; };
+		46C5148F1C0A782700546E04 /* Animated.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Animated.ttf; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,6 +121,7 @@
 		469459FE1BBA259300291141 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				46C5148F1C0A782700546E04 /* Animated.ttf */,
 				460218881BD5D3E6000E88E9 /* meow01.wav */,
 				4624F24A1BD572040021FE36 /* Meow-sound-3.wav */,
 				469459FF1BBA259300291141 /* Info.plist */,
@@ -230,6 +233,7 @@
 				46945A0F1BBA259300291141 /* LaunchScreen.xib in Resources */,
 				4624F24B1BD572040021FE36 /* Meow-sound-3.wav in Resources */,
 				46945A251BBA25DC00291141 /* main.xib in Resources */,
+				46C514901C0A782700546E04 /* Animated.ttf in Resources */,
 				46945A0C1BBA259300291141 /* Images.xcassets in Resources */,
 				46945A2A1BBA2AB300291141 /* splash.xib in Resources */,
 			);

@@ -10,11 +10,13 @@
 #import "CustomIOSAlertView.h"
 
 @interface ViewController () {
-    int imageCount;
     int tapCount;
+    float heartScore;
     int state;
     int currMin;
     int currSec;
+    Boolean animate;
+    
     UIImageView *imageView;
     UIView *sweetSpot;
     UIView *gettingClose;
@@ -22,7 +24,7 @@
     NSMutableArray *images;
     UIImage *tappyCat1;
     UIImage *tappyCat2;
-    int start;
+
     SystemSoundID meowSound;
     CustomIOSAlertView *alertView;
 }
@@ -46,15 +48,18 @@
 
     
     //initializing variables
-    imageCount = 0;
-    _lScore.text = [NSString stringWithFormat:@"Score: %d",tapCount];
-    imageView = _iTappyCat01;
+    tapCount = 0;
+    heartScore = 9;
     state = 2;
-    sweetSpot = [[UIView alloc] init];
-    gettingClose = [[UIView alloc] init];
-    _lTime.text = @"Time: 1:00";
     currMin = 1;
     currSec = 00;
+
+    _lScore.text = [NSString stringWithFormat:@"Score: %d",tapCount];
+    _lTime.text = @"Time: 1:00";
+
+    imageView = _iTappyCat01;
+    sweetSpot = [[UIView alloc] init];
+    gettingClose = [[UIView alloc] init];
     images = [[NSMutableArray alloc] init];
     tappyCat1 = [UIImage imageNamed:@"tappycat_s1-01"];
     tappyCat2 = [UIImage imageNamed:@"tappycat_s1-02"];
@@ -63,14 +68,13 @@
     
     NSString *meowPath = [[NSBundle mainBundle]pathForResource:@"meow01" ofType:@"wav"];
     NSURL *meowURL = [NSURL fileURLWithPath:meowPath];
+    AudioServicesCreateSystemSoundID((__bridge CFURLRef)meowURL, &(meowSound));
+
     
     alertView = [[CustomIOSAlertView alloc] init];
     [alertView setContainerView:_alertBox];
     
-
-    AudioServicesCreateSystemSoundID((__bridge CFURLRef)meowURL, &(meowSound));
-    
-    
+    animate = true;
     [self animation];
     
 }
@@ -82,14 +86,16 @@
     
     imageView.animationImages = images;
     imageView.animationDuration = .5;
-    while(![imageView isAnimating]){
-        [imageView startAnimating];
-    }
-    imageView.hidden = NO;
-    _iTappyCat02.hidden = YES;
-    _iTappyCat03.hidden = YES;
-    _iTappyCat04.hidden = YES;
+    imageView.animationRepeatCount = INFINITY;
+    
+    _iTappyCat02_2.hidden = YES;
+    _iTappyCat03_2.hidden = YES;
+    _iTappyCat04_2.hidden = YES;
 
+    if(animate){
+        [imageView startAnimating];
+        imageView.hidden = NO;
+    }
 }
 
 /*
@@ -111,30 +117,67 @@ Changes the image of the cat depending on the value of state.
         tappyCat1 = [UIImage imageNamed:@"tappycat_s2-01"];
         tappyCat2 = [UIImage imageNamed:@"tappycat_s2-02"];
     }
-    //[images replaceObjectAtIndex:0 withObject:tappyCat1];
-    //[images replaceObjectAtIndex:1 withObject:tappyCat2];
 }
+
+-(BOOL) isTransparentPoint:(CGPoint)point
+{
+    CGImageRef cgim = [imageView image].CGImage;
+
+    unsigned char pixel[1] = {0};
+    
+    CGContextRef context = CGBitmapContextCreate(pixel,
+                                                 1, 1, 8, 1, NULL, (CGBitmapInfo)kCGImageAlphaOnly);
+    
+    CGContextDrawImage(context, CGRectMake(-point.x,
+                                           -point.y,
+                                           CGImageGetWidth(cgim),
+                                           CGImageGetHeight(cgim)),cgim);
+    CGContextRelease(context);
+    CGFloat alpha = pixel[0]/255.0;
+    BOOL transparent = alpha < 1.0;
+    
+    return transparent;
+}
+
 /*
 Within the cat image boundaries, create a small shape at a random coordinate and a larger shape around its center.
  */
 -(void)generateSweetSpot {
-
+    
     int maxX = CGRectGetMaxX(imageView.frame);
     int maxY = CGRectGetMaxY(imageView.frame);
     int minX = CGRectGetMinX(imageView.frame);
     int minY = CGRectGetMinY(imageView.frame);
-
-    int randX = (arc4random()%((maxX-50)-minX))+minX;
-    int randY = (arc4random()%(maxY-minY))+minY;
     
-    sweetSpot.frame = CGRectMake(randX, randY, 50, 50);
-
-    gettingClose.frame = CGRectMake(sweetSpot.center.x - 80, sweetSpot.center.y -80, 160,160);
+    maxX = maxX-55;
+    maxY = maxY-55;
+    minX = minX+55;
+    minY = minY+55;
+    
+    int randX = 0;
+    int randY = 0;
+    
+    BOOL transparent = true;
+    
+    while(transparent){
+        randX = (arc4random()%((maxX)-minX))+minX;
+        randY = (arc4random()%(maxY-minY))+minY;
+        CGPoint point = CGPointMake(randX, randY);
+        transparent = [self isTransparentPoint:point];
+        NSLog(@"is transparent?: %d",transparent);
+    }
+    
+    if(transparent == false){
+        sweetSpot.frame = CGRectMake(randX-25, randY-25, 50, 50);
+        NSLog(@"%d, %d, %f, %f", randX, randY, sweetSpot.center.x, sweetSpot.center.y);
+        gettingClose.frame = CGRectMake(sweetSpot.center.x - 80, sweetSpot.center.y -80, 160,160);
+    }
     
     //For testing purposes
-    //[gettingClose setBackgroundColor:[UIColor blueColor]];
-    //[sweetSpot setBackgroundColor:[UIColor redColor]];
-    
+    [gettingClose setBackgroundColor:[UIColor blueColor]];
+    [sweetSpot setBackgroundColor:[UIColor redColor]];
+    [gettingClose setAlpha:0.5];
+    [sweetSpot setAlpha:0.5];
     
     [self.view addSubview:gettingClose];
     [self.view addSubview:sweetSpot];
@@ -147,54 +190,108 @@ Within the cat image boundaries, create a small shape at a random coordinate and
 -(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
     
     [touches enumerateObjectsUsingBlock:^(id obj, BOOL *stop) {
-        
         // Get a single touch and it's coordinates
         UITouch *touch = obj;
         CGPoint touchPoint = [touch locationInView:self.view];
         
         //[self checkEnd];
         
-        if(_bNextLabel.isEnabled){
-            _lBottomInstructions.text = @"Press Start first...";
-        }
-        else{
-            
+        if(!_bNextLabel.isEnabled && CGRectContainsPoint(imageView.frame,touchPoint)){
+            animate = false;
             if(CGRectContainsPoint(gettingClose.frame, touchPoint)){
                 //touched within the large shape
+                NSLog(@"TOUCHED CLOSE");
+                
+                //change image
                 state = 2;
                 [imageView setImage:[UIImage imageNamed:@"tappycat_s2-01"]];
-                //[self tappyCatState];
-                _lBottomInstructions.text = @"Getting warmer...";
+                _lBottomInstructions.text = @"Meow. . . \n(Getting warmer)";
                 imageView.hidden = YES;
                 _iTappyCat02.hidden = NO;
                 [imageView stopAnimating];
                 
                 if(CGRectContainsPoint(sweetSpot.frame, touchPoint)){
                     //touched within the small shape
-                    AudioServicesPlaySystemSound(meowSound);
-                    
-                    tapCount ++;
-                    _lScore.text = [NSString stringWithFormat:@"Score: %d",tapCount];
-                    _lBottomInstructions.text = @"You got it! Find the next spot...";
+                    NSLog(@"TOUCHED POINT");
+
+                    //change image
                     state = 1;
                     [imageView setImage:[UIImage imageNamed:@"tappycat_s1-01"]];
-                    //[self tappyCatState];
+                    _lBottomInstructions.text = @"*Purr Purr!* \n (You got it, keep going!)";
                     imageView.hidden = YES;
                     _iTappyCat04.hidden = NO;
                     [imageView stopAnimating];
-                    [self generateSweetSpot];
+
+                    //score increase
+                    tapCount ++;
+                    _lScore.text = [NSString stringWithFormat:@"Score: %d",tapCount];
+                    
+                    //play meow sound
+                    AudioServicesPlaySystemSound(meowSound);
+                    
                 }
             }
             else{
                 //touched outside of both shapes
+                NSLog(@"TOUCHED OUT");
+                
+                //change image
                 state = 3;
                 [imageView setImage:[UIImage imageNamed:@"tappycat_s2-01"]];
-                //[self tappyCatState];
-                _lBottomInstructions.text = @"Not even close...";
+                _lBottomInstructions.text = @"*Hiss!* \n(Not even close!)";
                 imageView.hidden = YES;
                 _iTappyCat03.hidden = NO;
                 [imageView stopAnimating];
+
+                //decrement heart score
+                heartScore = heartScore -.1;
+                
+                NSLog(@"heartCOunt: %f", heartScore);
             }
+            [imageView stopAnimating];
+            if([imageView isAnimating] == false)NSLog(@"stopped animating");
+        }
+    }];
+}
+
+-(void) touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event{
+    [touches enumerateObjectsUsingBlock:^(id obj, BOOL *stop) {
+        
+        // Get a single touch and it's coordinates
+        UITouch *touch = obj;
+        CGPoint touchPoint = [touch locationInView:self.view];
+        
+        if(!_bNextLabel.isEnabled && CGRectContainsPoint(imageView.frame,touchPoint)){        
+            
+            _iTappyCat02.hidden = YES;
+            _iTappyCat03.hidden = YES;
+            _iTappyCat04.hidden = YES;
+            animate = true;
+
+            if(CGRectContainsPoint(gettingClose.frame, touchPoint)){
+                //touched within the large shape
+                imageView.hidden = YES;
+                _iTappyCat02_2.hidden = NO;
+                NSLog(@"LET GO CLOSE");
+
+                if(CGRectContainsPoint(sweetSpot.frame, touchPoint)){
+                    //touched within the small shape
+                    imageView.hidden = YES;
+                    _iTappyCat04_2.hidden = NO;
+                    [self generateSweetSpot];
+                    NSLog(@"LET GO POINT");
+
+                }
+            }
+            else{
+                //touched outside of both shapes
+                imageView.hidden = YES;
+                _iTappyCat03_2.hidden = NO;
+                NSLog(@"LET GO OUT");
+
+            }
+            [self animation];
+            if([imageView isAnimating])NSLog(@"started animating");
         }
     }];
 }
@@ -226,7 +323,6 @@ Within the cat image boundaries, create a small shape at a random coordinate and
                                               cancelButtonTitle:@"OK"
                                               otherButtonTitles:nil];
         [alert show];
-        //[alertView show];
     }
 }
 
@@ -254,7 +350,7 @@ Within the cat image boundaries, create a small shape at a random coordinate and
     [self generateSweetSpot];
     [_bNextLabel setEnabled:NO];
     _bNextLabel.hidden = YES;
-    _lBottomInstructions.text = @"Start tappin'!";
+    _lBottomInstructions.text = @"Meow! \n(Start tappin'!)";
 }
 
 @end

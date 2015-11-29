@@ -20,7 +20,7 @@
     CGSize oSplashSize = self.view.bounds.size;
     oSplashView.frame = CGRectMake(0, 0, oSplashSize.width, oSplashSize.height);
     [self.view addSubview:oSplashView];
-
+    
 }
 
 - (void)didReceiveMemoryWarning {
